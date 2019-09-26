@@ -25,7 +25,7 @@ public class ConfigManager {
 
     private static Object loadConfig(String Path,Class<? extends Object> clazz){
         String tempPath = ENV_CONFIG_ROOT_PATH+USER_PERMISSION;
-
+        return null;
     }
 
 

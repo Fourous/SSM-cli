@@ -13,4 +13,6 @@
         ssm(id,email,password,username)
         VALUES(#{id},#{email},#{password},#{username})
     </insert>
+
+
 </mapper>
