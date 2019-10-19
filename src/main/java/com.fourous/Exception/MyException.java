@@ -2,11 +2,14 @@ package com.fourous.Exception;
 
 /**
  * 自定义异常类(继承运行时异常)
+ * 自定义注解必须要继承Exception这个类
  * @author Fourous
- * @version 2016/11/26
+ * @version 2019.9.26
  */
 public class MyException extends RuntimeException {
-
+    /**
+     * 这里serialVersionUID的生成采取默认的1L，最好是用idea生成推荐的Hash加密的数据
+     */
     private static final long serialVersionUID = 1L;
 
     /**

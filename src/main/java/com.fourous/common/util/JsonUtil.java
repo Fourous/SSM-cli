@@ -12,6 +12,7 @@ import java.util.Set;
 /**
  * Json转换工具类
  */
+@SuppressWarnings("all")
 public class JsonUtil {
     public static Gson gson = new Gson();
 
@@ -26,6 +27,7 @@ public class JsonUtil {
      * 这里链接到license文件，对JSON可以加入license实现控制
      */
     public static final String k;
+
     static {
         StringBuilder a = new StringBuilder();
         a.append("license");

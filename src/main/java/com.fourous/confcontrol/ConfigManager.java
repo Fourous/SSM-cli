@@ -1,4 +1,4 @@
-package com.fourous.conf;
+package com.fourous.confcontrol;
 
 import com.fourous.system.SystemConfig;
 import com.google.gson.Gson;
