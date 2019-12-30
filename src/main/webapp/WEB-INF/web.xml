@@ -8,29 +8,29 @@
   <description>SsmCli need to add some file to run</description>
 
   <!-- 编码过滤器 -->
-  <filter>
-    <filter-name>encodingFilter</filter-name>
-    <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
-    <init-param>
-      <param-name>encoding</param-name>
-      <param-value>UTF-8</param-value>
-    </init-param>
-  </filter>
-<!--添加filter过滤器测试-->
-  <filter>
-    <filter-name>loginFilter</filter-name>
-    <filter-class>com.fourous.common.filter.LoginFilter</filter-class>
-    <async-supported>true</async-supported>
-  </filter>
-<!--filter-mapping可看作一个别名，作为前端请求的位置，通常也可以写成*.do形式-->
-  <filter-mapping>
-    <filter-name>loginFilter</filter-name>
-    <url-pattern>/loginFilter</url-pattern>
-  </filter-mapping>
-  <filter-mapping>
-    <filter-name>encodingFilter</filter-name>
-    <url-pattern>/*</url-pattern>
-  </filter-mapping>
+<!--  <filter>-->
+<!--    <filter-name>encodingFilter</filter-name>-->
+<!--    <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>-->
+<!--    <init-param>-->
+<!--      <param-name>encoding</param-name>-->
+<!--      <param-value>UTF-8</param-value>-->
+<!--    </init-param>-->
+<!--  </filter>-->
+<!--&lt;!&ndash;添加filter过滤器测试&ndash;&gt;-->
+<!--  <filter>-->
+<!--    <filter-name>loginFilter</filter-name>-->
+<!--    <filter-class>com.fourous.common.filter.LoginFilter</filter-class>-->
+<!--    <async-supported>true</async-supported>-->
+<!--  </filter>-->
+<!--&lt;!&ndash;filter-mapping可看作一个别名，作为前端请求的位置，通常也可以写成*.do形式&ndash;&gt;-->
+<!--  <filter-mapping>-->
+<!--    <filter-name>loginFilter</filter-name>-->
+<!--    <url-pattern>/loginFilter</url-pattern>-->
+<!--  </filter-mapping>-->
+<!--  <filter-mapping>-->
+<!--    <filter-name>encodingFilter</filter-name>-->
+<!--    <url-pattern>/*</url-pattern>-->
+<!--  </filter-mapping>-->
 
   <!-- 配置DispatcherServlet -->
   <servlet>
@@ -58,10 +58,10 @@
 <!--listener监听配置-->
 <!--listener具体分为八种，能够监听包括request域，session域，application域的产生，销毁和属性的变化-->
   <listener>
-    <listener-class>com.fourous.common.listener.ContextListener</listener-class>
+    <listener-class>com.common.listener.ContextListener</listener-class>
   </listener>
   <listener>
-    <listener-class>com.fourous.common.listener.SessionListener</listener-class>
+    <listener-class>com.common.listener.SessionListener</listener-class>
   </listener>
 
 </web-app>

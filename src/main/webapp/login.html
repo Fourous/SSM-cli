@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+<script src="./jquery-3.3.1.js"></script>
+<script>
+  let dataList = {
+    username: 'fourous',
+    password: '123123',
+    telephone: '123123',
+    authCode: '123123'
+  }
+  dataList = JSON.stringify(dataList)
+  fetch("http://localhost:8085/sso/login", {
+    method: 'POST',
+    mode: 'cors',
+    headers: {
+      'Content-Type': "application/json;charset=UTF-8",
+    },
+    body: dataList
+  }).then(res => console.log(res))
+  $.ajax({
+    url: 'http://localhost:8085/sso/login',
+    'method': 'POST',
+    'headers': {
+      'Content-Type': "application/json"
+    },
+    'data': dataList,
+    'dataType': 'json',
+  }).done(function (response) {
+    console.log(response);
+  });
+</script>
+</body>
+</html>
